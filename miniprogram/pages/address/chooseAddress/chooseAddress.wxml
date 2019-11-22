@@ -1,0 +1,16 @@
+<view class='addressList' wx:for="{{addressArray}}" wx:key="key">
+<view class='list'>
+  <!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
+  <!--index为每个数据对应的下标-->
+  <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
+  <view class='info' bindtap='select_addr'data-name="{{item.name}}"data-phoneNumber="{{item.phoneNumber}}"
+  data-address="{{item.address}}">
+  <view>序号：{{index+1}}</view>
+  <view>{{item.name}} <span class="phone">{{item.phoneNumber}}</span></view>
+  <view>{{item.address}}</view>
+  </view>
+  </view>
+  <!-- <view class="delete"  bindtap="deleteAddress"  data-id="{{item._id}}">删除</view> -->
+</view>
+
+<button class="addAddress" bindtap="addAddress">添加新地址</button>

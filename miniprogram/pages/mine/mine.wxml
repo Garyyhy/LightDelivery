@@ -1,0 +1,8 @@
+
+<open-data type="userAvatarUrl" class="picture"></open-data>
+<open-data type="userNickName" class="nickName"></open-data>
+
+<button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" bindtap="goToMyOrders" class="searchButton">查询我的订单</button>
+<button bindtap="goToMyAddress">管理我的地址</button>
+<!-- <button class="myAddress">管理我的收获地址</button> -->
+<button ></button>

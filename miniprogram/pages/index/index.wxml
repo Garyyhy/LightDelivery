@@ -1,0 +1,3 @@
+<button type="button" class="send" bindtap="gotoGrab">取</button>
+<button type="button" class="grab" bindtap="gotoSub">代取</button>
+<image src="../../images/timg.gif" class="backImage"></image>

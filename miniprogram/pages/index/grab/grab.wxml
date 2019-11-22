@@ -1,0 +1,47 @@
+<view class="title" >订单信息</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view bindtap="chooseAddress" class="fontWeight">收货地址
+    <view wx:if="{{select_address==false}}" class="select">点击选择地址</view>
+    <view wx:if="{{select_address==true}}" class="select">
+
+      <view>{{payed_address}}</view>
+      <view>{{payed_name}}-{{payed_phoneNumber}}</view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="fontWeight">快递点</view>
+    <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="place" range-key="name" data-selecthx="{{array[index].name}}">
+      <view class="picker">
+        当前选择：{{array[index].name}}
+      </view>
+    </picker>
+  </view>
+
+
+  <view>
+    <view class="fontWeight">重量选择</view>
+    <picker mode="selector" bindchange="bindPickerChangeWeight" value="{{indexWeight}}" range="{{arrayWeight}}" name="weight" range-key="name">
+      <view class="picker">
+        当前选择：{{arrayWeight[indexWeight].name}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="fontWeight">送达时间</view>
+  <picker mode="selector" bindchange="bindPickerChangeTime" value="{{indexTime}}" range="{{arrayTime}}" name="time" range-key="time" data-selecthx="{{arrayTime[indexTime].time}}">
+    <view class="picker">
+      当前选择：{{arrayTime[indexTime].time}}
+    </view>
+  </picker>
+
+  <view class="fontWeight">取件码：</view>
+  <input type="text" placeholder="请输入数字" name="code"></input>
+
+  <view class="fontWeight">取件备注：</view>
+  <input type="text" placeholder="请输入备注" name="note"></input>
+
+  
+  <button formType="reset" bindtap="showWindowsReset" class="resetButton">重置</button>
+  <button formType="submit" class="submitButton">提交</button>
+</form>

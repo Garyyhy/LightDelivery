@@ -1,0 +1,30 @@
+/* pages/mine/mine.wxss */
+page{
+  margin: 0rpx;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.picture {
+  height: 200rpx;
+  width: 200rpx;
+  border: 1rpx solid black;
+}
+
+.nickName {
+  position: relative;
+  left: 50rpx;
+}
+
+/* .searchButton {
+  height: 100rpx;
+  width: 300rpx;
+  border: 1rpx solid black;
+  position: absolute;
+  top: 55rpx;
+  right: 125rpx;
+} */
+
+.order{
+  border: 1rpx solid black;
+  width: 100%;
+}

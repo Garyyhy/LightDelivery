@@ -1,0 +1,24 @@
+<view class="select">
+  <view>取件快递点</view>
+  <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="place" range-key="name" data-selecthx="{{array[index].name}}">
+    <view class="picker">
+      当前选择：{{array[index].name}}
+    </view>
+  </picker>
+</view>
+<view wx:if="{{grabArray.length==0}}">暂无取件信息</view>
+<view wx:if="{{grabArray.length!=0}}">
+  <view class='grabList' wx:for="{{grabArray}}" wx:key="key">
+    <view>序号：{{index+1}}</view>
+    <view>取件人：{{item.address.name}}</view>
+    <view>电话号码：{{item.address.phoneNumber}}</view>
+    <view>重量：{{item.weight}}</view>
+    <view>取件码：{{item.code}}</view>
+    <view wx:if="{{item.note==0}}">备注：无</view>
+    <view wx:if="{{item.note!=0}}">
+      <view>备注：{{item.note}}</view>
+    </view>
+    <view>时间：{{item.time}}</view>
+    <button type="button" bindtap="success" data-id="{{item._id}}">已取件</button>
+  </view>
+</view>

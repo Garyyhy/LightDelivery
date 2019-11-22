@@ -1,0 +1,39 @@
+page {
+  /* font-family: 楷体; */
+  margin: 0rpx;
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+
+.title {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  /* font-family: 楷体; */
+}
+
+.submitButton {
+  width: 48%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 50%;
+  font-size: 40rpx;
+}
+
+.resetButton {
+  width: 48%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  
+  font-size: 40rpx;
+}
+
+.fontWeight {
+  font-weight: bold;
+}
+
+.select{
+ font-weight: normal; 
+}

@@ -1,0 +1,24 @@
+
+<view class="bar">
+<view bindtap="allOrders" class="topBar">全部</view>
+<view bindtap="unfinishedOrders" class="topBar">未完成</view>
+<view bindtap="grabOrders" class="topBar">已取件</view>
+<view bindtap="finishedOrders" class="topBar">已完成</view>
+</view>
+
+
+<view wx:if="{{array.length==0}}">您还没有相关订单</view>
+<view wx:if="{{array.length!=0}}">
+<view>当前页订单数量：{{count}}</view>
+<view class='order' wx:for="{{array}}" wx:key="key" >
+  <view>序号：{{index+1}}</view>
+  <view>收货地址：{{item.address.address}}——{{item.address.name}}——{{item.address.phoneNumber}}</view>
+  <view>取件快递：{{item.place}}</view>
+  <view>快递重量：{{item.weight}}</view>
+  <view>收货时间：{{item.time}}</view>
+  <view>我的取件码：{{item.code}}</view>
+  <view>我的备注：{{item.note}}</view>
+  <view>订单状态：{{item.state}}</view>
+  <view>接单人：{{item.staff}}</view>
+</view>
+</view>

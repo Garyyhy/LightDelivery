@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/index/substitute/substituteLogin/substituteLogin",
+    "pages/index/substitute/substituteIndex/substituteIndex",
+    "pages/index/substitute/substituteGrab/substituteGrab",
+    "pages/index/substitute/substituteDelivery/substituteDelivery",
+    "pages/index/grab/grab",
+    "pages/address/chooseAddress/chooseAddress",
+    "pages/address/addAddress/addAddress",
+    "pages/address/myAddress/myAddress",
+    "pages/address/updateAddress/updateAddress",
+    "pages/orders/checkorders"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "寄取",
+        "iconPath": "images/package.png",
+        "selectedIconPath": "images/package_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "光速递",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap90.json"
+}

@@ -1,0 +1,9 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view>收货人：</view>
+  <input type="text" name="customer" placeholder="请填写真实姓名" value="{{name}}"></input>
+  <view>收货地址：</view>
+  <input type="text" name="address" placeholder="例如 12-526" value="{{address}}"></input>
+  <view>电话号码</view>
+  <input type="number" name="phone" placeholder="请填写正确的电话号码" value="{{phoneNumber}}"></input>
+  <button formType="submit" class="submitButton">更改</button>
+</form>

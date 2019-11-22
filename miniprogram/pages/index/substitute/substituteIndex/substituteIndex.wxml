@@ -1,0 +1,2 @@
+<button bindtap="gotoGrab">接单</button>
+<button bindtap="gotoDelivery">配送</button>

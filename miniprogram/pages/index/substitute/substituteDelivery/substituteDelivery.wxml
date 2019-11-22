@@ -1,0 +1,16 @@
+<view wx:if="{{deliveryArray.length==0}}">暂无配送信息</view>
+<view wx:if="{{deliveryArray.length!=0}}">
+  <view>剩余未配送订单数量：{{orderCount}}</view>
+  <view wx:for="{{deliveryArray}}" wx:key="key">
+    <view>序号：{{index+1}}</view>
+    <view>取件人：{{item.address.name}}</view>
+    <view>电话号码：{{item.address.phoneNumber}}</view>
+    <view>地址：{{item.address.address}}</view>
+    <view wx:if="{{item.note==0}}">备注：无</view>
+    <view wx:if="{{item.note!=0}}">
+      <view>备注：{{item.note}}</view>
+    </view>
+    <view>时间：{{item.time}}</view>
+    <button type="button" bindtap="success" data-id="{{item._id}}">已完成</button>
+  </view>
+</view>
